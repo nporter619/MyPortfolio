@@ -21,8 +21,64 @@ header {
     padding: 10 px;
     padding-left:0;
 }
-.container {
+
+header .container {
     display:flex;
     justify-content:space-between;
     align-items: center;
+}
+
+.hero {
+    height: 200px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero img {
+    position:absolute;
+    width: 100%;
+    height:auto;
+    opacity:.5;
+}
+
+.hero h2 {
+    background-color: #aaeae5;
+    position: absolute;
+    right: 20px;
+    bottom:20px;
+    padding:5px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.container {
+    display:flex;
+    width:100%;
+}
+
+.container .left{
+    border-right: 3px solid;
+    padding-right:10px;
+    text-align:right;
+    width: 150px;
+}
+
+.container.right{
+    padding-left: 20px;
+    width:calc(100%-150px);
+}
+.flex-container {
+    display: inline-flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width:800px) {
+    .flex-container {
+        display:block;
+        flex-direction: column;
+    }
 }
